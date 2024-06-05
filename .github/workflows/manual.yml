@@ -31,5 +31,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.name }}"
-      run: echo "Your favourite colour is ${{ github.event.inputs.colour }}"
+      run: echo "Hello ${{ github.event.inputs.name }}. Your favourite colour is ${{ github.event.inputs.colour }}"
