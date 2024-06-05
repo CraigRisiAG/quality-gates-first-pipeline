@@ -15,6 +15,10 @@ on:
         default: 'World'
         # Input has to be provided for the workflow to run
         required: true
+      colour:
+        description: 'Favourite colour'
+        default: 'Red'
+        required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,3 +32,4 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
+      run: echo "Your favourite colour is ${{ github.event.inputs.colour }}"
